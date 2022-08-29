@@ -1,0 +1,44 @@
+{
+  "name": "lemons-bg-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts ..",
+    "build": "tsc && cpx \"./src/*.hbs\" ./lib --clean",
+    "start": "node lib/index.js",
+    "build:watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lim0n3/lemons-bg-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lim0n3/lemons-bg-api/issues"
+  },
+  "homepage": "https://github.com/lim0n3/lemons-bg-api#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jimp": "^0.16.1",
+    "node-html-to-image": "^3.2.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^28.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  }
+}
