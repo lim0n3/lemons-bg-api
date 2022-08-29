@@ -1,6 +1,5 @@
 import express, {Express} from "express";
 import {readFileSync} from "fs";
-import {createServer} from 'http';
 import Jimp from 'jimp';
 import nodeHtmlToImage from 'node-html-to-image';
 
@@ -40,4 +39,4 @@ app.post('/api/images', async (req, res) => {
     res.json({ data: (img as Buffer).toString('base64') });
 });
 
-createServer(app).listen(3001);
+export default app;
