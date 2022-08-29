@@ -12,7 +12,8 @@ app.post('/api/images', async (req, res) => {
     const w = parseInt(width, 10) ?? 828;
     const h = parseInt(height, 10) ?? 1792;
 
-    res.json({ data: (await getImageFromHtml(imgUrl, w, h) as Buffer).toString('base64') });
+    const img = await getImageFromHtml(imgUrl, w, h)
+    res.json({ data: img.toString('base64') });
 });
 
 export default app;
